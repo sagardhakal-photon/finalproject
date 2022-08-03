@@ -1,0 +1,43 @@
+<!DOCTYPE html>  
+<html lang="en">  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>Musician User Details</title>  
+         {% load static %}  
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    
+    </head>  
+<div class="container">
+    <div class="jumbotron">
+      <h1>XYX MUSIC DATABASE</h1>
+    </div>
+<body> 
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class=".thead-dark">  
+    <tr>  
+        <th>Phone Number</th> 
+        <th>City</th>
+        <th>Area</th>  
+        <th>Street</th>  
+        <th>House Number</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for full_address in full_addresss %}  
+    <tr>  
+        <td>{{ full_address.Phone_Num }}</td>  
+        <td>{{ full_address.City }}</td>  
+        <td>{{ full_address.Area }}</td>  
+        <td>{{ full_address.Street }}</td>  
+        <td>{{ full_address.House_Num}}</td>
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/" class="btn btn-primary">Home Page</a></center>  
+</body>  
+</html>  
